@@ -7,22 +7,22 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
-    // canActivate:[DeviceGuard]
+    canActivate:[DeviceGuard]
   },
   {
     path: 'new',
     loadChildren: () => import('./pages/new/new.module').then( m => m.NewPageModule),
-    // canActivate:[DeviceGuard,AuthGuard]
+    canActivate:[DeviceGuard,AuthGuard]
   },
   {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule),
-    // canActivate:[DeviceGuard,AuthGuard]
+    canActivate:[DeviceGuard,AuthGuard]
   },
   {
     path: 'clients',
     loadChildren: () => import('./pages/clients/clients.module').then( m => m.ClientsPageModule),
-    // canActivate:[DeviceGuard,AuthGuard]
+    canActivate:[DeviceGuard,AuthGuard]
   },
   {
     path: 'desktop-page',
@@ -31,7 +31,7 @@ const routes: Routes = [
   {
     path: 'insurance-details',
     loadChildren: () => import('./pages/insurance-details/insurance-details.module').then( m => m.InsuranceDetailsPageModule),
-    // canActivate:[DeviceGuard,AuthGuard]
+    canActivate:[DeviceGuard,AuthGuard]
   },
   {
     path: '**',
