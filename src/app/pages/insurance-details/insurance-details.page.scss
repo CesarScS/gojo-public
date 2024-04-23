@@ -1,0 +1,33 @@
+ion-content{
+    --background: #f8f9fa;
+}
+
+ion-header{
+    background: linear-gradient(to right, #7590d6,#4d71d7);
+    // background: #6658dd;
+    box-shadow: none;
+}
+
+#header {
+    height: 13%;
+    // background: #6658dd;
+    // background-image: url('/assets/img/banner.jpg');
+    background-image: linear-gradient(to right, #7590d6,#4d71d7);
+
+    // clip-path: polygon(30% 0%, 100% 0, 100% 53%, 90% 80%, 19% 80%, 0 100%, 0% 70%, 0 0);
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.insurance_details_header{
+    position: absolute;
+    top: 6%;
+    left: 1%;
+    right: 1%;
+
+    .form-wrapper {
+        box-shadow: none;
+        border-radius: 20px;
+        // padding: 15px 10px;
+    }
+}

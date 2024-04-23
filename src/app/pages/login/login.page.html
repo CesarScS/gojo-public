@@ -1,0 +1,59 @@
+<ion-content [fullscreen]="true" class="animate__animated animate__fadeIn">
+    <div id="header">
+        <div id="app-bar">
+            <ion-icon name="arrow-back" routerLink="/welcome"></ion-icon>
+            <div id="logo">
+                <img src="assets/img/umbrella-logo-min.png" alt="">
+            </div>
+        </div>
+
+        <h1>Iniciar Sesion</h1>
+        <p>Sign in to discover amazing things near <br>around you</p>
+    </div>
+
+    <div class="wrapper animate__animated custom-fade-in">
+        <ion-card class="form-wrapper">
+            <ion-card-content>
+                <form (ngSubmit)="login()">
+                    <ion-item>
+                        <ion-input [(ngModel)]="loginUser.email" name="email" type="text" placeholder="Usuario"></ion-input>
+                        <ion-icon name="mail" slot="end"></ion-icon>
+                    </ion-item>
+ 
+                    <ion-item>
+                        <ion-input [(ngModel)]="loginUser.password" name="password" type="password" placeholder="Contraseña"></ion-input>
+                        <ion-icon name="lock-closed" slot="end"></ion-icon>
+                    </ion-item>
+
+                    <ion-button expand="block" mode="md" type="submit">
+                        Iniciar Sesion
+                    </ion-button>
+                </form>
+            </ion-card-content>
+        </ion-card>
+
+        <div class="line-text">
+            <span class="lines"></span>
+            <span class="text">Protege a los que amas</span>
+        </div>
+
+        <ion-card class="social-wrapper">
+            <ion-card-content>
+                <div class="socials">
+                    <ion-button class="btn-fb">
+                        <ion-icon name="football"></ion-icon>
+                    </ion-button>
+                    <ion-button class="btn-fb">
+                        <ion-icon name="football"></ion-icon>
+                    </ion-button>
+                    <ion-button class="btn-fb">
+                        <ion-icon name="football"></ion-icon>
+                    </ion-button>
+                    <ion-button class="btn-fb">
+                        <ion-icon name="football"></ion-icon>
+                    </ion-button>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header [translucent]="true" mode="md">
+    <ion-buttons>
+        <ion-back-button mode="md"  defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+    
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div id="header">
+
+        <ion-item class="search_bar">
+            <ion-input placeholder="RFC" slot="start"></ion-input>
+            <ion-button slot="end" (click)="validRfc()" shape="round">
+                <ion-icon name="search" mode="md"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </div>
+    
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+</ion-content>

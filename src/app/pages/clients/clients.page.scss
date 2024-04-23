@@ -1,0 +1,40 @@
+ion-content{
+    // --background: #e0dfe6;
+    --background: linear-gradient(#7590d6,#4d71d7);
+}
+
+ion-header{
+    // background: linear-gradient(#7590d6,#4d71d7);
+    // background: #6658dd;
+    box-shadow: none;
+}
+
+.main-content{
+    // background: #fff;
+    background: #f8f9fa;
+    position: absolute;
+    border-radius: 30px;
+    padding: 5px;
+    top: 23%;
+    width: 100%;
+    min-height: 73%;
+}
+
+
+#header {
+    height: 33%;
+    // background: #6658dd;
+    // background-image: url('/assets/img/banner.jpg');
+    background-image: linear-gradient(#7590d6,#4d71d7);
+    // clip-path: polygon(30% 0%, 100% 0, 100% 53%, 90% 80%, 19% 80%, 0 100%, 0% 70%, 0 0);
+    padding: 20px;
+
+    .search_bar{
+        border-radius: 18px;
+    }
+
+    #app-bar {
+        
+    }
+}
+

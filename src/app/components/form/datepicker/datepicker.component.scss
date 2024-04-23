@@ -1,0 +1,24 @@
+.datetime-modal {
+    --background: rgba(44, 39, 45, .2);
+
+    ion-content {
+        --background: transparent;
+        --padding-top: 25vh;
+        --padding-start: 2vh;
+        --padding-end: 2vh;
+
+        ion-datetime {
+            border-radius: 8px;
+        }
+    }
+}
+
+ion-item{
+    border-radius: 8px;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+ion-item.round_item{
+    border-radius: 50px;
+}

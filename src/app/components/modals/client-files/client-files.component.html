@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="closeModal()">
+                <ion-icon name="close-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12">
+                <h3>Subir Documentacion</h3>
+                <ion-label color="medium">Sube la documentacion del cliente y consultala en cualquier momento</ion-label>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="modal-opts-content">
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+                    <h1>Subir Archivo</h1>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-icon name="image-outline" slot="start"></ion-icon>
+                    <h1>Tomar Foto</h1>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-icon name="cloud-download-outline" slot="start"></ion-icon>
+                    <h1>Subir desde la nube</h1>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

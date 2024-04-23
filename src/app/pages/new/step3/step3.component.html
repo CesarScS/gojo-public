@@ -1,0 +1,29 @@
+
+<app-multi-step [stepValues]="['Cliente','Poliza','Confirmar']" [currentItem]="3"></app-multi-step>
+
+<div class="p-2" *ngIf="insurance !== null">
+    <ion-item>
+        <ion-label slot="start">
+            <b>Cliente:</b>
+        </ion-label>
+        {{insurance.Names + " " + insurance.LastName + " " + insurance.SecondLastname}}
+    </ion-item>
+    <ion-item>
+        <ion-label slot="start">
+            <b>Paquete:</b>
+        </ion-label>
+        {{insurance.Package}}
+    </ion-item>
+
+    <div class="footer_form">
+        <ion-button class="bg_blue_degree" slot="start" shape="round" (click)="backStep()">
+            <!-- Regresar -->
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+
+        <ion-button class="bg_blue_degree" slot="end" shape="round">
+            Crear
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+    </div>
+</div>

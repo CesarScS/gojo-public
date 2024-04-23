@@ -1,0 +1,92 @@
+<app-multi-step [stepValues]="['Cliente','Poliza','Confirmar']" [currentItem]="2"></app-multi-step>
+
+<div class="p-2 box_shadow">
+    <ion-item>
+        <ion-select label="Paquete:" interface="action-sheet" placeholder="Seleccionar" *ngIf="catalogs.packages">
+            <ion-select-option [value]="item.Value" *ngFor="let item of catalogs.packages">
+                {{item.Text}}
+            </ion-select-option>
+        </ion-select>
+    </ion-item>
+    
+    <!-- ESTE IGUAL NO ES NECESARIO -->
+    <ion-item>
+        <ion-select label="Agente:" interface="action-sheet" placeholder="Seleccionar" *ngIf="catalogs.agents">
+            <ion-select-option [value]="item.Value" *ngFor="let item of catalogs.agents">
+                {{item.Text}}
+            </ion-select-option>
+        </ion-select>
+    </ion-item>
+    <!-- ESTE IGUAL NO ES NECESARIO -->
+    
+    <ion-item>
+        <ion-select label="Metodo de Pago:" interface="action-sheet" placeholder="Seleccionar" *ngIf="catalogs.payments">
+            <ion-select-option [value]="item.Value" *ngFor="let item of catalogs.payments">
+                {{item.Text}}
+            </ion-select-option>
+        </ion-select>
+    </ion-item>
+    
+    <!--  -->
+    <app-datepicker shape="round" *ngIf="insurance" [value]="''" labelText="Valido desde"></app-datepicker>
+    <app-datepicker shape="round" *ngIf="insurance" [value]="''" labelText="Valido hasta"></app-datepicker>
+    
+    <ion-item>
+        <ion-icon name="football" slot="start"></ion-icon>
+        <ion-input placeholder="Costo de Emision"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-icon name="football" slot="start"></ion-icon>
+        <ion-input placeholder="Comisión Porcentaje"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-select label="Categoria:" interface="action-sheet" placeholder="Seleccionar" *ngIf="catalogs.payments">
+            <ion-select-option [value]="item.Value" *ngFor="let item of catalogs.payments">
+                {{item.Text}}
+            </ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <div class="footer_form">
+        <ion-button class="bg_blue_degree" slot="start" shape="round" (click)="backStep()">
+            <!-- Regresar -->
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button class="bg_blue_degree" slot="end" shape="round" (click)="nextStep()">
+            <!-- Continuar -->
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+    </div>
+</div>
+
+
+<!-- 
+<ion-item id="open-modal">
+    <ion-icon name="calendar-outline" slot="start"></ion-icon>
+    <ion-label>Valido desde</ion-label>
+    <ion-text slot="end">
+        12/2/1994
+    </ion-text>
+</ion-item>
+
+<ion-modal class="datetime-modal" trigger="open-modal">
+    <ng-template>
+        <ion-content>
+            <ion-datetime 
+                #datetime
+                presentation="date" 
+                size="cover" 
+                showDefaultButtons="true" 
+                (ionChange)="dateChanged(datetime.value)"
+                text
+                cancelText="Cancelar"
+                doneText="Aceptar"
+                displayFormat="DD/MM/YYYY"
+                monthShortNames="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre"
+            >
+            </ion-datetime>
+        </ion-content> 
+    </ng-template>
+</ion-modal> -->

@@ -1,0 +1,178 @@
+<ion-header [translucent]="true" mode="md">
+    <ion-buttons>
+        <ion-back-button mode="md" defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div id="header">
+    </div>
+
+    <div class="insurance_details_header">
+        <ion-card class="form-wrapper">
+            <ion-card-header>
+                <ion-card-title>Numero: UMI000002326</ion-card-title>
+                <ion-card-subtitle>SOFIA ANGELICA VERDUGO DELGADO</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+                <p>
+                    <b>Paquete: </b>SNTE
+                </p>
+                <p>
+                    <b>Prima Total: </b>$1,800.00
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+        <div class="form-wrapper">
+            <ion-card-content>
+                <swiper-container pagination="true">
+                    <swiper-slide>
+                        <ion-item>
+                            <ion-icon color="primary" slot="start" name="football"></ion-icon>
+                            <ion-label slot="" color="medium">
+                                <ion-label color="warning">No pagado</ion-label>
+                                <span>pago</span>
+                            </ion-label>
+                        </ion-item>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <ion-item>
+                            <ion-icon color="primary" slot="start" name="football"></ion-icon>
+                            <ion-label slot="" color="medium">
+                                <ion-label color="primary">Vigente</ion-label>
+                                <span>15/01/2024 - Emision</span>
+                            </ion-label>
+                        </ion-item>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <ion-item>
+                            <ion-icon color="primary" slot="start" name="football"></ion-icon>
+                            <ion-label slot="" color="medium">
+                                <ion-label color="primary">Vigencia</ion-label>
+                                <span>11/01/2024 - 10/01/2025</span>
+                            </ion-label>
+                        </ion-item>
+                    </swiper-slide>
+                </swiper-container>
+            </ion-card-content>
+        </div>
+
+        <ion-card class="form-wrapper">
+            <ion-card-content>
+                <app-separator text="Asegurados"></app-separator>
+                <ion-list>
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-icon color="primary" slot="start" name="person-circle-outline"></ion-icon>
+                            <ion-label slot="">
+                                <h3>SOFIA ANGELICA DELGADO VERDUGO</h3>
+                                <p>
+                                    F. Nacimiento: 18/09/1973
+                                    <br />
+                                    Parentesco: Titular
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item-options slot="end">
+                            <ion-item-option color="secondary">
+                                <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+                            </ion-item-option>
+                            <ion-item-option color="tertiary">
+                                <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-icon color="primary" slot="start" name="person-circle-outline"></ion-icon>
+                            <ion-label slot="">
+                                <h3>SOFIA ANGELICA DELGADO VERDUGO</h3>
+                                <p>
+                                    F. Nacimiento: 18/09/1973
+                                    <br />
+                                    Parentesco: Titular
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item-options slot="end">
+                            <ion-item-option color="secondary">
+                                <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+                            </ion-item-option>
+                            <ion-item-option color="tertiary" (click)="openAddBeneficiaryModal()">
+                                <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+
+
+        <ion-card class="form-wrapper">
+            <ion-card-content>
+                <app-separator text="Beneficiarios"></app-separator>
+                <ion-list>
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-icon color="primary" slot="start" name="person-circle-outline"></ion-icon>
+                            <ion-label slot="">
+                                <h3>GLORIA CRISTAL GUTIERREZ VERDUGO</h3>
+                                <p>
+                                    Parentesco: Titular
+                                    <br />
+                                    Porcentaje de participación: 100%
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item-options slot="end">
+                            <ion-item-option color="secondary">
+                                <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+                            </ion-item-option>
+                            <ion-item-option color="danger" expandable="true">
+                                <ion-icon slot="icon-only" name="trash"></ion-icon>
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-icon color="primary" slot="start" name="person-circle-outline"></ion-icon>
+                            <ion-label slot="">
+                                <h3>SOFIA ANGELICA VERDUGO DELGADO</h3>
+                                <p>
+                                    Parentesco: Padre/Madre
+                                    <br />
+                                    Porcentaje de participación: 100%
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item-options slot="end">
+                            <ion-item-option color="secondary">
+                                <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+                            </ion-item-option>
+                            <ion-item-option color="danger" expandable="true">
+                                <ion-icon slot="icon-only" name="trash"></ion-icon>
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+    <!-- START FABS -->
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button >
+            <ion-icon name="chevron-up-circle"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+            <ion-fab-button (click)="openFilesModal()">
+                <ion-icon name="document"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+    <!-- END FABS -->
+</ion-content>

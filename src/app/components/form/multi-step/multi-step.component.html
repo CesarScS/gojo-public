@@ -1,0 +1,7 @@
+
+<ul class="step_wizard_list" >
+    <li class="step_wizard_item" *ngFor="let item of stepValues; let i = index" [ngClass]="{'current_item':currentItem === i + 1}">
+        <span class="progress_count">{{i + 1}}</span>
+        <span class="progress_label">{{item}}</span>
+    </li>
+</ul>

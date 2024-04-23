@@ -1,0 +1,54 @@
+<ion-header [translucent]="true" mode="md">
+    <ion-buttons>
+        <ion-back-button mode="md" defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div id="header">
+
+        <ion-item class="search_bar">
+            <ion-input [(ngModel)]="searchTerm" placeholder="Buscar" [disabled]="clients.length === 0"></ion-input>
+            <ion-button slot="end" shape="round" (click)="searchClients()">
+                <ion-icon name="search" mode="md"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </div>
+
+    <div class="main-content">
+        <ion-grid>
+            
+            <ion-list *ngIf="clients.length === 0">
+                <ion-item *ngFor="let _ of [].constructor(10); let i = index">
+                    <ion-label>
+                        <h3>
+                            <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+
+            </ion-list>
+            <ion-list *ngIf="clients.length > 0">
+                <ion-item *ngFor="let item of currentClients; let i = index">
+                    <ion-label>
+                        <h3>
+                            {{item.Names}} {{item.LastName}} {{item.SecondLastname}}
+                        </h3>
+                        <p>
+                            <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+
+            </ion-list>
+            <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+                <ion-infinite-scroll-content></ion-infinite-scroll-content>
+            </ion-infinite-scroll>
+        </ion-grid>
+    </div>
+</ion-content>

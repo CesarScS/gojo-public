@@ -1,0 +1,82 @@
+<div class="box_container">
+    <app-multi-step [stepValues]="['Cliente','Poliza','Confirmar']" [currentItem]="1">
+    </app-multi-step>
+
+
+    <div class="p-2" *ngIf="isObjectNotEmpty(cliente); else elseBlock">
+        <ion-item>
+            <ion-select label="Persona:" interface="action-sheet" placeholder="Seleccionar">
+                <ion-select-option value="Fisica">Fisica</ion-select-option>
+                <ion-select-option value="Moral">Moral</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="football" slot="start"></ion-icon>
+            <ion-input [ngModel]="insurance.Names" labelPlacement="floating">
+                <div slot="label">Nombre(s)</div>
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="football" slot="start"></ion-icon>
+            <ion-input [ngModel]="insurance.LastName" labelPlacement="floating">
+                <div slot="label">Apellido Paterno</div>
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="football" slot="start"></ion-icon>
+            <ion-input [ngModel]="insurance.SecondLastname" labelPlacement="floating">
+                <div slot="label">Apellido Materno</div>
+            </ion-input>
+        </ion-item>
+
+        <app-datepicker shape="round" *ngIf="insurance" [value]="insurance.Birthdate" labelText="Fecha de Nacimiento">
+        </app-datepicker>
+
+        <ion-item>
+            <ion-icon name="football" slot="start"></ion-icon>
+            <ion-input [ngModel]="insurance.Email" labelPlacement="floating">
+                <div slot="label">Email</div>
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="football" slot="start"></ion-icon>
+            <ion-input [ngModel]="insurance.Phone" labelPlacement="floating">
+                <div slot="label">Telefono</div>
+            </ion-input>
+        </ion-item>
+
+        <footer class="footer_form">
+            <ion-button class="bg_blue_degree" slot="end" shape="round" (click)="nextStep()">
+                <!-- Continuar -->
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+        </footer>
+    </div>
+
+  
+</div>
+<ng-template #elseBlock>
+    <div class="notFound_container">
+        <img class="notFound_container_img" src="/assets/img/avatar_generic.jpg">
+    </div>
+</ng-template>
+
+<!-- <ion-card *ngIf="isObjectNotEmpty(cliente)">
+    <ion-card-header>
+        <ion-card-title>{{cliente.Names}} {{cliente.LastName}} {{cliente.SecondLastname}}</ion-card-title>
+        <ion-card-subtitle>{{cliente.RFC}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+        <p>{{cliente.State}}, {{cliente.City}}</p>
+        <p>{{cliente.PersonType}}</p>
+        <p>{{cliente.Email}}</p>
+        <p>{{cliente.Phone}}</p>
+        <p>{{cliente.Street}}</p>
+        <p>{{cliente.Zipcode}}</p>
+    </ion-card-content>
+</ion-card> -->
