@@ -8,7 +8,6 @@
         </div>
 
         <h1>Iniciar Sesion</h1>
-        <p>Sign in to discover amazing things near <br>around you</p>
     </div>
 
     <div class="wrapper animate__animated custom-fade-in">
@@ -17,12 +16,12 @@
                 <form (ngSubmit)="login()">
                     <ion-item>
                         <ion-input [(ngModel)]="loginUser.email" name="email" type="text" placeholder="Usuario"></ion-input>
-                        <ion-icon name="mail" slot="end"></ion-icon>
+                        <!-- <ion-icon name="mail" slot="end"></ion-icon> -->
                     </ion-item>
  
                     <ion-item>
                         <ion-input [(ngModel)]="loginUser.password" name="password" type="password" placeholder="Contraseña"></ion-input>
-                        <ion-icon name="lock-closed" slot="end"></ion-icon>
+                        <!-- <ion-icon name="lock-closed" slot="end"></ion-icon> -->
                     </ion-item>
 
                     <ion-button expand="block" mode="md" type="submit">
